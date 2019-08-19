@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+
+
+    .header {
+        height: 10%;
+        background: #4a5aa1;
+        font-size: 2em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .score {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .main {
+        height: 85%;
+        margin: 0 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-align: center;
+
+        &__item {
+            width: 200px;
+            height: 150px;
+            background: #4a5aa1;
+            margin: 15px;
+            cursor: pointer;
+        }
+
+        .car {
+            background: url('img/car.jpg');
+            background-size: cover;
+        }
+
+        .landscape {
+            background: url('img/landscape.jpg');
+            background-size: cover;
+        }
+
+        .react {
+            background: url('img/react.png');
+            background-size: cover;
+        }
+
+        .banana {
+            background: url('img/banana.jpg');
+            background-size: cover;
+        }
+
+        .windows {
+            background: url('img/windows.jpg');
+            background-size: cover;
+        }
+
+        .apple {
+            background: url('img/apple.jpg');
+            background-size: cover;
+        }
+
+        .green__border {
+            border: 2px solid #298b29;
+            transition: border .3s ease;
+        }
+
+        .red__border {
+            transition: border .3s ease;
+            border: 3px solid #7a2626;
+        }
+    }
+
+    .footer {
+        height: 5%;
+        background: #4a5aa1;
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+}
