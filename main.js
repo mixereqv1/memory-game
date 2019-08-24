@@ -13,7 +13,7 @@ const game = {
         if(this.canClick) {
             if(!this.tilesChecked[0] || (this.tilesChecked[0].dataset.index !== event.target.dataset.index)) {
                 this.tilesChecked.push(event.target);
-                event.target.classList.add(this.images[event.target.dataset.cardType]);
+                event.target.classList.add(this.images[event.target.dataset.cardType]); 
             }
             if(this.tilesChecked.length == 2) {
                 this.canClick = false;

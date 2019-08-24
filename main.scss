@@ -11,6 +11,9 @@
     color: #fff;
     font-family: 'Oswald', sans-serif;
 
+    @media screen and(max-width: 990px) {
+        height: auto;
+    }
 
     .header {
         height: 10%;
@@ -40,42 +43,61 @@
         font-weight: bold;
         text-align: center;
 
+        @media screen and(max-width: 768px) {
+            margin: 0 25px;
+        }
+
         &__item {
             width: 200px;
             height: 150px;
             background: #4a5aa1;
             margin: 15px;
             cursor: pointer;
+
+            @media screen and(max-width: 768px) {
+                width: 100px;
+                height: 100px;
+                background-position: center;
+            }
+        }
+
+        &__item:hover {
+            transform: scale(1.1);
+            transition: transform .3s ease;
         }
 
         .car {
             background: url('img/car.jpg');
-            background-size: cover;
         }
 
         .landscape {
             background: url('img/landscape.jpg');
-            background-size: cover;
         }
 
         .react {
             background: url('img/react.png');
-            background-size: cover;
         }
 
         .banana {
             background: url('img/banana.jpg');
-            background-size: cover;
         }
 
         .windows {
             background: url('img/windows.jpg');
-            background-size: cover;
         }
 
         .apple {
             background: url('img/apple.jpg');
+        }
+
+        .car, .landscape, .react, .banana, .windows, .apple {
             background-size: cover;
+            transform: scale(1);
+            transition: transform .3s ease;
+
+            @media screen and(max-width: 768px) {
+                background-position: center;
+            }
         }
 
         .green__border {

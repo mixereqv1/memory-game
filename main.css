@@ -12,6 +12,12 @@
   font-family: 'Oswald', sans-serif;
 }
 
+@media screen and (max-width: 990px) {
+  .container {
+    height: auto;
+  }
+}
+
 .container .header {
   height: 10%;
   background: #4a5aa1;
@@ -41,6 +47,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .container .main {
+    margin: 0 25px;
+  }
+}
+
 .container .main__item {
   width: 200px;
   height: 150px;
@@ -49,34 +61,53 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .container .main__item {
+    width: 100px;
+    height: 100px;
+    background-position: center;
+  }
+}
+
+.container .main__item:hover {
+  transform: scale(1.1);
+  transition: transform .3s ease;
+}
+
 .container .main .car {
   background: url("img/car.jpg");
-  background-size: cover;
 }
 
 .container .main .landscape {
   background: url("img/landscape.jpg");
-  background-size: cover;
 }
 
 .container .main .react {
   background: url("img/react.png");
-  background-size: cover;
 }
 
 .container .main .banana {
   background: url("img/banana.jpg");
-  background-size: cover;
 }
 
 .container .main .windows {
   background: url("img/windows.jpg");
-  background-size: cover;
 }
 
 .container .main .apple {
   background: url("img/apple.jpg");
+}
+
+.container .main .car, .container .main .landscape, .container .main .react, .container .main .banana, .container .main .windows, .container .main .apple {
   background-size: cover;
+  transform: scale(1);
+  transition: transform .3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .container .main .car, .container .main .landscape, .container .main .react, .container .main .banana, .container .main .windows, .container .main .apple {
+    background-position: center;
+  }
 }
 
 .container .main .green__border {
