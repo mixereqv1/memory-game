@@ -12,6 +12,7 @@
     font-family: 'Oswald', sans-serif;
 
     @media screen and(max-width: 990px) {
+        min-height: 100vh;
         height: auto;
     }
 
@@ -24,6 +25,10 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+
+        @media screen and(max-width: 990px) {
+            min-height: 10vh;
+        }
 
         .score {
             width: 100%;
@@ -38,13 +43,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-content: center;
         font-size: 2.5em;
         font-weight: bold;
         text-align: center;
 
         @media screen and(max-width: 768px) {
             margin: 0 25px;
+            min-height: 85vh;
         }
 
         &__item {
@@ -90,7 +96,12 @@
             background: url('img/apple.jpg');
         }
 
-        .car, .landscape, .react, .banana, .windows, .apple {
+        .car,
+        .landscape,
+        .react,
+        .banana,
+        .windows,
+        .apple {
             background-size: cover;
             transform: scale(1);
             transition: transform .3s ease;
@@ -109,6 +120,27 @@
             transition: border .3s ease;
             border: 3px solid #7a2626;
         }
+
+        .congratulations__div {
+            width: 100%;
+            text-align: center;
+        }
+
+        .reset__btn {
+            margin-top: 40px;
+            width: 200px;
+            color: #e2e2e2;
+            background: #303030;
+            border-radius: 8px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .reset__btn:hover {
+            background: #1b1b1b;
+            color: #fff;
+            transition: color, background-color .3s ease;
+        }
     }
 
     .footer {
@@ -120,5 +152,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
+
+        @media screen and(max-width: 990px) {
+            font-weight: normal;
+        }
     }
 }

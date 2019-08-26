@@ -40,7 +40,20 @@ const memory_game = {
         this.tilesChecked = [];
         this.pairs += 1;
         if (this.pairs == this.count / 2) {
-            this.game__board.innerText = 'Game Over, Congratulations! You did it in: ' + this.moves + ' moves';
+            this.game__board.innerText = '';
+
+            let congratulations__div = document.createElement('div');
+            congratulations__div.className = 'congratulations__div';
+            congratulations__div.innerText = 'Game Over, Congratulations! You did it in: ' + this.moves + ' moves'
+            this.game__board.appendChild(congratulations__div);
+
+            let reset__btn = document.createElement('div');
+            reset__btn.className = 'reset__btn';
+            reset__btn.innerText = 'Restart game'
+            this.game__board.appendChild(reset__btn);
+            document.querySelector('.reset__btn').addEventListener('click', a => {
+                location.reload();
+            })
         }
     },
 
